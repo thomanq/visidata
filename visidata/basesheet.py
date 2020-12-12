@@ -45,6 +45,7 @@ class BaseSheet(Extensible):
     rowtype = 'objects'  # one word, plural, describing the items
     precious = True      # False for a few discardable metasheets
     defer = False        # False for not deferring changes until save
+    _shortcut = None     # index for `jump-sheet`
 
     @visidata.classproperty
     def class_options(cls):

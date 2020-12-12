@@ -400,6 +400,8 @@ def cmdlog_sheet(sheet):
 
 @BaseSheet.property
 def shortcut(self):
+    if self._shortcut:
+        return self._shortcut
     try:
         return str(vd.allSheets.index(self)+1)
     except ValueError:
